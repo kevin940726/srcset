@@ -10,7 +10,7 @@ function deepUnique(array) {
 
 exports.parse = string => {
 	return deepUnique(
-		string.split(/,\s+/).map(part => {
+		string.split(/(?<=\s-?\d+[wx]),/).map(part => {
 			const result = {};
 
 			part
